@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="twitterBirdColor">#1DA1F2</color>
+    <color name="twitterMainColor">#FFFFFFFF</color>
+    <color name="topMenuSelectedItemColor">#FF000000</color>
+    <color name="topMenuUnselectedItemColor">#616161</color>
+
+    <color name="bottomMenuSelectedItemColor">#FF000000</color>
+    <color name="bottomMenuUnselectedItemColor">#474747</color>
+
+    <color name="textMainColor">#FF000000</color>
+    <color name="textSecondaryColor">#6C6C6C</color>
+
+</resources>

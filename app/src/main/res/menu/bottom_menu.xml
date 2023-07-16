@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/bottomhomelightmode"
+        android:title="Home" />
+    <item
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/bottomsearchlightmode"
+        android:title="Search" />
+    <item
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/bottommiclightmode"
+        android:title="Chat" />
+    <item
+        android:id="@+id/notificationsFragment"
+        android:icon="@drawable/bottomnotificationlightmode"
+        android:title="Notifications" />
+    <item
+        android:id="@+id/dmFragment"
+        android:icon="@drawable/bottomdmlightmode"
+        android:title="Messages" />
+</menu>

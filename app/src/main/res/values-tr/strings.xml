@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TwitterClone</string>
+    <string name="uppermenuForYou">Sana özel</string>
+    <string name="uppermenuFollowing">Takip edilenler</string>
+</resources>

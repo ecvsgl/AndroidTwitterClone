@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tweetCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/topMenuUnselectedItemColor">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/twitterMainColor"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-1dp">
+
+            <ImageView
+                android:id="@+id/retweetLogo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="72dp"
+                app:layout_constraintBottom_toBottomOf="@+id/commentLogo"
+                app:layout_constraintStart_toEndOf="@+id/commentLogo"
+                app:layout_constraintTop_toTopOf="@+id/commentLogo"
+                app:srcCompat="@drawable/retweetbutton" />
+
+            <TextView
+                android:id="@+id/retweetNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="retweetNumber"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="@+id/commentNumber"
+                app:layout_constraintStart_toEndOf="@+id/retweetLogo"
+                app:layout_constraintTop_toTopOf="@+id/commentNumber"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/senderPicture"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/userimg" />
+
+            <TextView
+                android:id="@+id/senderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="senderName"
+                android:textColor="@color/textMainColor"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/senderPicture"
+                app:layout_constraintTop_toTopOf="@+id/senderPicture" />
+
+            <TextView
+                android:id="@+id/tweetContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="none"
+                android:scrollHorizontally="false"
+                android:text="tweetContent"
+                android:textColor="@color/textMainColor"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/senderPicture"
+                app:layout_constraintTop_toBottomOf="@+id/senderName" />
+
+            <TextView
+                android:id="@+id/senderUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="senderUsername"
+                android:textColor="@color/textSecondaryColor"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/senderName"
+                app:layout_constraintStart_toEndOf="@+id/blueTick"
+                app:layout_constraintTop_toTopOf="@+id/senderName"
+                app:layout_constraintVertical_bias="0.25" />
+
+            <TextView
+                android:id="@+id/tweetAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="tweetAge"
+                android:textColor="@color/textSecondaryColor"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/seperator"
+                app:layout_constraintStart_toEndOf="@+id/seperator"
+                app:layout_constraintTop_toTopOf="@+id/seperator" />
+
+            <ImageView
+                android:id="@+id/blueTick"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/senderName"
+                app:layout_constraintStart_toEndOf="@+id/senderName"
+                app:layout_constraintTop_toTopOf="@+id/senderName"
+                app:srcCompat="@drawable/bluetick" />
+
+            <TextView
+                android:id="@+id/seperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="•"
+                android:textColor="@color/textSecondaryColor"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="@+id/senderUsername"
+                app:layout_constraintStart_toEndOf="@+id/senderUsername"
+                app:layout_constraintTop_toTopOf="@+id/senderUsername" />
+
+            <TextView
+                android:id="@+id/menuDots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="•••"
+                android:textColor="@color/textSecondaryColor"
+                app:layout_constraintBottom_toBottomOf="@+id/tweetAge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tweetAge" />
+
+            <ImageView
+                android:id="@+id/tweetPhotoContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/menuDots"
+                app:layout_constraintStart_toStartOf="@+id/tweetContent"
+                app:layout_constraintTop_toBottomOf="@+id/tweetContent"
+                tools:srcCompat="@drawable/ic_launcher_background" />
+
+            <ImageView
+                android:id="@+id/commentLogo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tweetContent"
+                app:layout_constraintTop_toBottomOf="@+id/tweetPhotoContent"
+                app:srcCompat="@drawable/replybutton" />
+
+            <TextView
+                android:id="@+id/commentNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="commentNumber"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="@+id/commentLogo"
+                app:layout_constraintStart_toEndOf="@+id/commentLogo"
+                app:layout_constraintTop_toTopOf="@+id/commentLogo" />
+
+            <ImageView
+                android:id="@+id/likeLogo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="64dp"
+                app:layout_constraintBottom_toBottomOf="@+id/commentLogo"
+                app:layout_constraintStart_toEndOf="@+id/retweetLogo"
+                app:layout_constraintTop_toTopOf="@+id/commentLogo"
+                app:srcCompat="@drawable/heartbutton" />
+
+            <TextView
+                android:id="@+id/likeNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="likeNumber"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="@+id/retweetNumber"
+                app:layout_constraintStart_toEndOf="@+id/likeLogo"
+                app:layout_constraintTop_toTopOf="@+id/retweetNumber" />
+
+            <ImageView
+                android:id="@+id/statsLogo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="48dp"
+                app:layout_constraintBottom_toBottomOf="@+id/commentLogo"
+                app:layout_constraintStart_toEndOf="@+id/likeLogo"
+                app:layout_constraintTop_toTopOf="@+id/commentLogo"
+                app:srcCompat="@drawable/statsbutton" />
+
+            <TextView
+                android:id="@+id/statsNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="statsNumber"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="@+id/likeNumber"
+                app:layout_constraintStart_toEndOf="@+id/statsLogo"
+                app:layout_constraintTop_toTopOf="@+id/likeNumber" />
+
+            <ImageView
+                android:id="@+id/shareLogo"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/commentLogo"
+                app:layout_constraintEnd_toEndOf="@+id/menuDots"
+                app:layout_constraintTop_toTopOf="@+id/commentLogo"
+                app:srcCompat="@drawable/sharebutton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
